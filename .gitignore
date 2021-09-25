@@ -1,4 +1,5 @@
 2021-01-11 bloomberg case data.ipynb
+.ipynb_checkpoints
 *.dta
 venv
 __pycache__
