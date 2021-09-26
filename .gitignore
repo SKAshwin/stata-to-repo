@@ -2,4 +2,5 @@
 .ipynb_checkpoints
 *.dta
 venv
+.env
 __pycache__
