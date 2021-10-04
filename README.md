@@ -58,3 +58,7 @@ The following 32 authors are also problematic and need to be manually sorted eve
 ### Vote decoding
 
 If a Judge's name is present in the dissenting column AND the concurring column, their vote is PARTIAL. If present in only the dissenting column, their vote is DISSENTING. If present in neither (or just concurring), assume the judge's vote is CONCURRING.
+
+### PER CURIAM Authorship
+
+In the event that the Author field is labelled "PER CURIAM", author=True on all judges.
