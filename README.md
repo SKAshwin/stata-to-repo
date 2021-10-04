@@ -1,4 +1,4 @@
-## Matching names to judges
+## Matching votes and authorship to judges
 
 The matching of which judge is being referred to by JudgesconcurringTouse and JudgesdissentingTouse fields (and the Author field) is done by `all_matching_judges_to_name` and `clean_matches`. This is necessary to correctly create the JudgeRulings for each case (when a dissenter is said to be WILLIAM, we need to know which of the 3 judge objects attached to that case is WILLIAM). There are some cases which couldn't be matched by general rules, and so I have noted down how they were handled.
 
@@ -54,3 +54,7 @@ The following 32 authors are also problematic and need to be manually sorted eve
 | XAFMTQ | 277 F3d 936  | 7       | WOOD, HARLINGTON, JR. | WILLIAMS, ANN CLAIRE  | WOOD, DIANE PAMELA      | WOOD     |
 | XAFNAC | 276 F3d 934  | 7       | WOOD, HARLINGTON, JR. | WILLIAMS, ANN CLAIRE  | WOOD, DIANE PAMELA      | WOOD     |
 | XE6JBO | 338 F3d 1221 | 11      | EDMONDSON, JAMES L.   | CARNES, EDWARD E.     | CARNES, JULIE ELIZABETH | CARNES   |
+
+### Vote decoding
+
+If a Judge's name is present in the dissenting column AND the concurring column, their vote is PARTIAL. If present in only the dissenting column, their vote is DISSENTING. If present in neither (or just concurring), assume the judge's vote is CONCURRING.
